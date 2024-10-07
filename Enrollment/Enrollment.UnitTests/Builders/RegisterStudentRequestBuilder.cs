@@ -6,43 +6,29 @@ namespace Enrollment.UnitTests.Builders;
 public class RegisterStudentRequestBuilder
 {
     private const string ValidName = "Blas";
-    private const string InValidName = "B";
     private static readonly DateOnly ValidBirthDate = DatesHelper.GetBirthDateForAge(20);
-    private static readonly DateOnly InvalidBirthDate = DatesHelper.GetBirthDateForAge(15);
     
     private RegisterStudentRequest _registerStudentRequest;
 
+    /// <summary>
+    ///  By default creates a valid entity.
+    /// </summary>
     public RegisterStudentRequestBuilder()
     {
-        _registerStudentRequest = new RegisterStudentRequest("", new DateOnly());
+        _registerStudentRequest = new RegisterStudentRequest(ValidName, ValidBirthDate);
     }
 
-    public RegisterStudentRequestBuilder WithValidName()
+    public RegisterStudentRequestBuilder WithName(string name)
     {
-        _registerStudentRequest = _registerStudentRequest with { Name = ValidName};
+        _registerStudentRequest = _registerStudentRequest with { Name = name};
         return this;
     }
     
-    public RegisterStudentRequestBuilder WithInvalidName()
+    public RegisterStudentRequestBuilder WithBirthDay(DateOnly birthDate)
     {
-        _registerStudentRequest = _registerStudentRequest with { Name = InValidName};
-        return this;
-    }
-    
-    public RegisterStudentRequestBuilder WithValidBirthDay()
-    {
-        _registerStudentRequest = _registerStudentRequest with { BirthDate = ValidBirthDate};
+        _registerStudentRequest = _registerStudentRequest with { BirthDate = birthDate};
         return this;
     }    
-    
-    public RegisterStudentRequestBuilder WithInvalidBirthDay()
-    {
-        _registerStudentRequest = _registerStudentRequest with { BirthDate = InvalidBirthDate };
-        return this;
-    }
 
-    public RegisterStudentRequest Build()
-    {
-        return _registerStudentRequest;
-    }
+    public RegisterStudentRequest Build() => _registerStudentRequest;
 }

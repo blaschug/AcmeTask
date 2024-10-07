@@ -3,6 +3,7 @@ using Enrollment.Application.Features.RegisterStudent;
 using Enrollment.Domain.Entities;
 using Enrollment.Domain.Exceptions;
 using Enrollment.UnitTests.Builders;
+using Enrollment.UnitTests.Helpers;
 using Moq;
 
 namespace Enrollment.UnitTests.Core;
@@ -22,7 +23,7 @@ public class RegisterStudent
     public async Task HandleShouldReturnDtoIfRequestIsValid()
     {
         // Arrange
-        var request = new RegisterStudentRequestBuilder().WithValidName().WithValidBirthDay().Build();
+        var request = new RegisterStudentRequestBuilder().Build();
         var savedStudent = Student.Create(request.Name, request.BirthDate);
         _studentRepository.Setup(x => x.AddAndSaveAsync(It.IsAny<Student>()))
             .ReturnsAsync(savedStudent);
@@ -33,6 +34,7 @@ public class RegisterStudent
         // Assert
         Assert.NotNull(result);
         Assert.IsType<RegisterStudentDto>(result); // Asserting result type
+        Assert.Equal(savedStudent.Id, result.Id);
         Assert.Equal(savedStudent.GetAge(), result.Age); // Asserting Age is well mapped
         Assert.Equal(savedStudent.Name, result.Name); // Asserting Name is well mapped
         _studentRepository.Verify(x => 
@@ -43,7 +45,8 @@ public class RegisterStudent
     public async Task HandleShouldRiseInvalidNameExceptionIfRequestNameIsInvalid()
     {
         // Arrange
-        var request = new RegisterStudentRequestBuilder().WithInvalidName().WithValidBirthDay().Build();
+        var invalidName = string.Empty;
+        var request = new RegisterStudentRequestBuilder().WithName(invalidName).Build();
         
         // Act
         var act = await Assert.ThrowsAsync<InvalidNameException>(() => Sut.Handle(request));
@@ -58,7 +61,8 @@ public class RegisterStudent
     public async Task HandleShouldRiseInvalidAgeExceptionIfRequestAgeIsInvalid()
     {
         // Arrange
-        var request = new RegisterStudentRequestBuilder().WithValidName().WithInvalidBirthDay().Build();
+        var invalidBirthDate = DatesHelper.GetBirthDateForAge(15);
+        var request = new RegisterStudentRequestBuilder().WithBirthDay(invalidBirthDate).Build();
         
         // Act
         var act = await Assert.ThrowsAsync<InvalidAgeException>(() => Sut.Handle(request));
@@ -74,7 +78,7 @@ public class RegisterStudent
     public async Task HandleShouldRiseExceptionIfRepositoryThrowsException()
     {
         // Arrange
-        var request = new RegisterStudentRequestBuilder().WithValidName().WithValidBirthDay().Build();
+        var request = new RegisterStudentRequestBuilder().Build();
         _studentRepository.Setup(x => x.AddAndSaveAsync(It.IsAny<Student>()))
             .ThrowsAsync(new Exception());
         

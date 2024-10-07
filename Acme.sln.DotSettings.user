@@ -10,6 +10,7 @@
       &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent.HandleShouldRiseExceptionIfRepositoryThrowsException&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent.HandleShouldRiseInvalidAgeExceptionIfRequestAgeIsInvalid&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterCourse&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

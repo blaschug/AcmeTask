@@ -20,6 +20,17 @@ public class Course : Entity
         EndDate = endDate;
     }
     
+    /// <summary>
+    /// Validate input and Creates a Course.
+    /// </summary>
+    /// <param name="name">Course name</param>
+    /// <param name="registrationFee">Course Fee</param>
+    /// <param name="startDate">Course start date, must be future.</param>
+    /// <param name="endDate">Course end date, must be higher than startDate</param>
+    /// <returns></returns>
+    /// <exception cref="InvalidNameException">Name is null or lenght less than 3</exception>
+    /// <exception cref="InvalidRegistrationFeeException">Registration fee is negative</exception>
+    /// <exception cref="InvalidCourseDateException">StartDate is before now or EndDate older than StartDate</exception>
     public static Course Create(string name, decimal registrationFee, DateTimeOffset startDate, DateTimeOffset endDate)
     {
         // Validate name
