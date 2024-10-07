@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enrollment", "Enrollment", "{DCDD95A9-ACEA-4A9E-9D80-CEF3D6C0CC09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "Enrollment\src", "{2F0A7C79-97BB-4E27-A282-E075AE864F79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "Enrollment\tests", "{D33A0FAE-7D80-4CE7-94F6-B9E85BEF5771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollment.Domain", "Enrollment\src\Enrollment.Domain\Enrollment.Domain.csproj", "{4EE8F9D2-3CAB-4D01-99E5-F80921BF2CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollment.UnitTests", "Enrollment\Enrollment.UnitTests\Enrollment.UnitTests.csproj", "{45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F0A7C79-97BB-4E27-A282-E075AE864F79} = {DCDD95A9-ACEA-4A9E-9D80-CEF3D6C0CC09}
+		{D33A0FAE-7D80-4CE7-94F6-B9E85BEF5771} = {DCDD95A9-ACEA-4A9E-9D80-CEF3D6C0CC09}
+		{4EE8F9D2-3CAB-4D01-99E5-F80921BF2CB2} = {2F0A7C79-97BB-4E27-A282-E075AE864F79}
+		{45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6} = {D33A0FAE-7D80-4CE7-94F6-B9E85BEF5771}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EE8F9D2-3CAB-4D01-99E5-F80921BF2CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EE8F9D2-3CAB-4D01-99E5-F80921BF2CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EE8F9D2-3CAB-4D01-99E5-F80921BF2CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EE8F9D2-3CAB-4D01-99E5-F80921BF2CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
