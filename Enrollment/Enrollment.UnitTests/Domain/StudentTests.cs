@@ -110,6 +110,6 @@ public class StudentTests
         var student = Student.Create(ValidName, birthDate);
         
         // Assert
-        Assert.Equal(ValidAge, student.GetAge());
+        Assert.Equal(ValidAge, student.GetAge()); // Asserting Age is the correct one
     }
 }

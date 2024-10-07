@@ -1,6 +1,6 @@
 namespace Enrollment.UnitTests.Helpers;
 
-public class DatesHelper
+public static class DatesHelper
 {
     public static DateOnly GetBirthDateForAge(int age) => 
         DateOnly.FromDateTime(DateTime.Today.AddYears(-age));

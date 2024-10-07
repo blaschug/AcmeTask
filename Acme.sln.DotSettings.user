@@ -4,6 +4,12 @@
     &lt;ProjectFile&gt;45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6/d:Domain/f:StudentTests.cs&lt;/ProjectFile&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Domain.CourseTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent.HandleShouldReturnDtoIfRequestIsValid&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent.HandleShouldThrownInvalidNameExceptionIfRequestNameIsInvalid&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent.HandleShouldThrownInvalidAgeExceptionIfRequestAgeIsInvalid&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent.HandleShouldRiseExceptionIfRepositoryThrowsException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent.HandleShouldRiseInvalidAgeExceptionIfRequestAgeIsInvalid&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6::net8.0::Enrollment.UnitTests.Core.RegisterStudent&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

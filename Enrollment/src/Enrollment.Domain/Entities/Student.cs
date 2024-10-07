@@ -17,6 +17,14 @@ public class Student : Entity
         BirthDate = birthDate;
     }
 
+    /// <summary>
+    /// Validate input and Creates a Student.
+    /// </summary>
+    /// <param name="name">Student name</param>
+    /// <param name="birthDate">Student BirthDate</param>
+    /// <returns></returns>
+    /// <exception cref="InvalidNameException">Name is null or lenght less than 2</exception>
+    /// <exception cref="InvalidAgeException">Student age must be at least 18</exception>
     public static Student Create(string name, DateOnly birthDate)
     {
         var validatedName = ValidateName(name);
