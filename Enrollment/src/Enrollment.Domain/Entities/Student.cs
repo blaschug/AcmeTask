@@ -19,25 +19,32 @@ public class Student : Entity
 
     public static Student Create(string name, DateOnly birthDate)
     {
-        // Validate Name
+        var validatedName = ValidateName(name);
+        ValidateAge(birthDate);
+
+        var student = new Student(
+            name: validatedName,
+            birthDate: birthDate);
+
+        return student;
+    }
+
+    private static string ValidateName(string name)
+    {
         var trimmedName = name?.Trim();
         if (!IsNameValid(trimmedName))
         {
             throw new InvalidNameException(typeof(Student), MinimumNameLength);
         }
 
-        // Validate age
-        if (!IsAgeValid(birthDate))
-        {
-            throw new InvalidAgeException();
-        }
-
-        var student = new Student(
-            name: trimmedName,
-            birthDate: birthDate);
-
-        return student;
+        return trimmedName;
     }
+    
+    private static void ValidateAge(DateOnly birthDate)
+    {
+        if (!IsAgeValid(birthDate))
+            throw new InvalidAgeException();
+    } 
 
     private static int CalculateAge(DateOnly birthdate)
     {
