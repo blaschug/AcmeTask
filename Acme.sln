@@ -8,9 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "Enrollment\tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollments.Domain", "Enrollment\src\Enrollments.Domain\Enrollments.Domain.csproj", "{4EE8F9D2-3CAB-4D01-99E5-F80921BF2CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollments.UnitTests", "Enrollment\Enrollments.UnitTests\Enrollments.UnitTests.csproj", "{45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollments.UnitTests", "Enrollment\tests\Enrollments.UnitTests\Enrollments.UnitTests.csproj", "{45EE0BD1-A2FE-413C-9C32-DDC7280CE0E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollments.Application", "Enrollment\Enrollments.Application\Enrollments.Application.csproj", "{5DE5D181-E68C-4BAA-81BD-5F841BC58825}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrollments.Application", "Enrollment\src\Enrollments.Application\Enrollments.Application.csproj", "{5DE5D181-E68C-4BAA-81BD-5F841BC58825}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

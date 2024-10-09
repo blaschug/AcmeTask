@@ -22,6 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\Enrollments.Application\Enrollments.Application.csproj" />
       <ProjectReference Include="..\Enrollments.Application\Enrollments.Application.csproj" />
       <ProjectReference Include="..\src\Enrollments.Domain\Enrollments.Domain.csproj" />
     </ItemGroup>

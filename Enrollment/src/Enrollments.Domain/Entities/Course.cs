@@ -60,6 +60,12 @@ public class Course : Entity
     {
         return DateTimeOffset.UtcNow >= StartDate;
     }
+
+    public void AddEnrollment(Enrollment enrollment)
+    {
+        ArgumentNullException.ThrowIfNull(enrollment);
+        _enrolments.Add(enrollment);
+    }
     
     private static string ValidateName(string name)
     {
@@ -85,7 +91,7 @@ public class Course : Entity
             throw new InvalidCourseDateException(DomainErrors.StartDateBeforeEndDate);
 
         // Validate course cannot start in past
-        if (startDate < DateTimeOffset.Now)
+        if (startDate < DateTimeOffset.UtcNow)
             throw new InvalidCourseDateException(DomainErrors.StartCourseInPast);
     }
     

@@ -23,4 +23,16 @@ public static class Mappers
             Name = student.Name
         };
     }
+
+    public static CourseWithRelationsDto ToDtoWithRelations(this Course course) => 
+        new CourseWithRelationsDto
+        {
+            Id = course.Id,
+            Name = course.Name,
+            StartDate = course.StartDate,
+            EndDate = course.EndDate,
+            Students = course.Enrollments
+                .Select(e => e.Student.ToDto())
+                .ToList()
+        };
 }

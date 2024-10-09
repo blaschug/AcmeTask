@@ -1,5 +1,3 @@
-using Enrollments.Domain.Entities;
-
 namespace Enrollments.Application.Constants;
 
 public static class ApplicationErrors
